@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>手提课-活到老学到老</title>
+<meta http-equiv="content-type" content="text/htm" charset="utf-8" />
+<meta name="keywords" content="shoutike" />
+<meta name="description" content="shoutike" />
+<meta mame="viewport" content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1"  />
+<!--<link rel="stylesheet" href="../content/bootstrap.min.css" />-->
+<link rel="stylesheet" href="../css/Login_page.css"  /> 
+<script type="text/javascript" src="../jscript/jquery-2.0.3.js"></script>
+<script type="text/javascript" src="../js/Login.js"></script>
+</head>
+<body>
+<div class="wrap">
+	<div class="header"></div>
+	 <div class="screen">
+        <div class="passport-page signup-skin1">
+            <div class="stk-container">
+            	<div class="page-head">
+            		<h3>请登录</h3>
+            		<p>安全</p>
+            	</div>
+                <div class="center clearfix">
+                    <div class="loginbox">
+                        <div class="loginhead">
+                            <div class="title">请输入您的手机号码和密码</div>
+                        </div>
+                        <div id="PageLogin">
+                            <section id="loginForm" class="formbox passport-inner">
+                           
+                                <form action="" method="post">
+                                	<div class="validation-summary-errors">
+                                		<ul>
+                                			<li></li>
+                                		</ul>
+                                	</div>
+                                	<input type="checkbox" checked="checked" id="RememberMe" name="RememberMe" style="display: none;" value="true" />
+                                	<input name="RememberMe" type="hidden" value="false" />
+                                	<fieldset id="">
+                                		<!--<legend></legend>-->
+                                		<div class="normalInput">
+	                                		<!--<input type="text" data-val="true" data-val-required="手机号码或邮箱 字段是必需的。" name="UserName" placeholder="手机号码" class="valid" />-->
+	                            			<input type="text" id="UserName" name="UserName" placeholder="手机号码" class="valid" value="" />
+	                                		
+                                		</div>
+	                                	<span class="error error1">请输入手机号</span>
+	                                	<div class="normalInput">
+	                                		<!--<input type="password" class="password input-validation-error" data-val-maxwords="密码最多8个汉字,16个字符" data-val-maxwords-param="16" data-val-minwords="密码最少8个字符" data-val-minwords-param="8" data-val-required="密码 字段是必需的。" id="Password" name="Password" placeholder="密码" />-->
+	                                		<input type="password" class="password input-validation-error" id="Password" name="Password" placeholder="密码" />
+	                                		
+	                                	</div>
+	                                	<span class="error error2"></span>
+	                                		<span class="error error3"></span>
+	                                	<div class="rememberField">
+	                                        <span class="checkboxPic check_chk" tabindex="-1" isshow="false">
+	                                            <i class="i_icon"></i>
+	                                        </span>
+	                                        <label style="font-size: 14px;" class="pointer">记住我</label>
+	                                        <div class="getpwd">
+	                                        	<a href="../views/forgetpassword.html">忘记密码</a>
+	                                            <p>丨</p>
+	                                            <a href="../views/Register.html">立即注册</a>
+	                                        </div>
+	                                    </div>
+	                                	<input type="button" value="登录" class="fullBtnBlue btnlogin" />
+                                		
+                                	</fieldset>
+                                	
+                                </form>
+                                <div class="splitline-or"><span>或</span></div>
+                                <div class="thirdparties passport-inner" id="connectLoginArea">
+                                    <div class="main-links">
+                                        <ul class="clearfix">
+                                            <li><a href="http://www.shoutike.com/account/qqlogin" connect="qzone" config=" 'cp': 1000208, 'cpp': 4001521, 'width': 710, 'height': 400, 'title': '腾讯QQ' " title="用QQ账号登录" charset="hz-4003757-1000494"><i class="ico-QQ"></i><em>QQ账号登录</em></a></li>
+                                            <li><a href="http://www.shoutike.com/account/wxlogin" connect="wechat" config=" 'cp': 0, 'cpp': 0, 'width': 400, 'height': 570, 'title': '微信' " title="用微信扫码登录" charset="hz-4009931-1000494"><i class="ico-wechat"></i><em>微信扫码登录</em></a></li>
+                                            <li><a href="http://www.shoutike.com/account/wblogin" connect="weibo" config=" 'cp': 1000208, 'cpp': 4002404, 'width': 950, 'height': 700, 'title': '微博' " title="用新浪微博账号登录" charset="hz-4003755-1000494"><i class="ico-weibo"></i><em>用新浪微博账号登录</em></a></li>
+                                        </ul>
+                                    </div>
+                                </div> 
+                            </section>
+                        </div>
+                    </div>
+                    <div class="border"></div>
+                    <div class="yqts">
+                        <div style="margin-bottom: 62px;"><span>友情提示：<br />　　如果您已关注过微信公众号，请使用微信登录。<br />　　如果您已经在公众号上绑定过手机号，可通过<br />   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;忘记密码重置密码后，使用手机号进行登录。</span></div>
+						<div class="pub">
+							<p>关注公众号</p>
+							<img src="../img/icon/qrcode.jpg" alt="关注公众号" />
+							<b>用手机观看视频更便捷哦!</b>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

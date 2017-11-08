@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>手提课-活到老学到老</title>
+<meta http-equiv="content-type" content="text/htm" charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta mame="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta name="keywords" content="shoutike" />
+<meta name="description" content="shoutike" />
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../content/bootstrap.min.css" />
+<link rel="stylesheet" href="../css/public.css" /> 
+<link rel="stylesheet" href="../css/play.css" />
+</head>
+<body style="background: #efefef;">
+<div class="wrap">
+	<!--顶部-->
+	<div class="navheader clearfix">
+		<div class="header clearfix">
+			<!--logo-->
+			<div class="logo" style="margin-top: -3px;">
+				<a href="../index.html" class="navbar-brand"><img src="../img/icon/logo-xin.png" style="width:120px;height： 50px;margin-top: -15px;" /></a>
+			</div>
+			<div class="stk-menu" style="width: 400px;">
+				<div class="head-menu" style="width: 100%;color: #fff;">
+					<span>考研数学预测与冲刺</span>
+					<span>1,高等数学之微积分学</span>
+				</div>
+			</div>
+			<!--登录注册-->
+			<ul class="nav-login">
+				<!--<li><a href="shopping.html" target="_blank" style="color: #666;"><span class="glyphicon glyphicon-shopping-cart"></span> 购物车</a></li>-->
+				<li></li>
+				<li class="nav-dlzc"><a href="javascript:;">登录</a></li>
+				<li class="nav-dlzc"><a href="javascript:;">注册</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="wrapper">
+		<!--播放视频和列表-->
+		<div class="play-main">
+			<!--播放界面和点赞分享-->
+			<div class="myplay">
+				<div class="player">
+					<div class="video">
+						<!--极酷阳光播放器/代码开始-->
+			            <div class="video2" id="CuPlayer">
+			                <script>
+			                    var vID = "";
+			                    var vWidth = "100%";            //播放器宽度设置
+			                    var vHeight = "100%";               //播放器高度设置
+			                    var vFile = "../jscript/v3/CuSunV3set.xml";
+			                    var vPlayer = "../jscript/v3/player.swf?v=3.5";
+			                    var vPic = "";//视频缩略图
+			                    var vCssurl = "../content/wxcss/mini.css";
+			                    var vMp4url = "http://oss.shoutike.com/stk/series/2/20170121/20170121180335nk6kNbbwEATCzZNkz3MQ.mp4"; 
+//                              var vMp4url = "C:\Users\Administrator\Desktop\demo\TWST.mp4";
+			                </script>
+			                <script class="CuPlayerVideo" data-mce-role="CuPlayerVideo" type="text/javascript" src="../jscript/v3/CuSunX1.min.js"></script>
+			           
+					    </div>
+					    <!--点赞收藏分享-->
+						<div class="myfx">
+							<div class="thumb-up">
+								<span class="pldz cursor"></span>
+								<span>54312</span>
+							</div>
+							<div class="collent">
+								<span class="pldz cursor"></span>
+								<span>67653</span>
+							</div>
+							<div class="record">
+								<span class="glyphicon glyphicon-expand"></span>
+								<span>107653</span>
+							</div>
+							<div class="shopp">
+								<span class="glyphicon glyphicon-shopping-cart"></span>
+								<span>76530</span>
+							</div>
+							<div class="share">
+								<span>分享</span>
+								<span class="share-wx"></span>
+								<span class="share-qq"></span>
+								<span class="share-wb"></span>
+							</div>
+							<div class="shopp-buy">
+								<p class="buynow">购买完整课程</p>
+								<p class="shopping"><span class="glyphicon glyphicon-shopping-cart"></span></p>
+							</div>
+							
+						</div>
+				    </div>
+			    </div>
+			    <!--播放列表和笔记-->
+				<div class="play-list">
+					<div class="list-tabs">
+						<ul>
+							<li class="kc-zj">课程目录</li>
+						</ul>
+					</div>
+					<div class="play-box">
+						<!--章节列表-->
+						<div class="play-con">
+							<div class="prog">
+								<em>学习进度条:</em>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+									   <span class="sr-only">60% Complete</span>
+									</div>
+								</div>
+							</div>
+							<ul class="list">
+								<li>
+									<a href="javascript:;">考研数学与冲刺</a>
+								</li>
+								<li>
+									<a href="javascript:;" title="第1集 高等数学之微分学">第1集 高等数学之微分学</a><i class="glyphicon glyphicon-ok-circle"></i>
+								</li>
+								<li class="playering">
+									<a href="javascript:;" title="第2集 高等数学之微分学">第2集 高等数学之微分学</a><i class="glyphicon glyphicon-play-circle"></i>
+								</li>
+								<li class="notplaying">
+									<a href="javascript:;" title="第3集 高等数学之微分学">第3集 高等数学之微分学</a><i>.</i>
+								</li>
+								<li class="notplaying">
+									<a href="javascript:;" title="第4集 高等数学之微分学">第4集 高等数学之微分学</a><i></i>
+								</li>
+							    <li class="notplaying">
+							    	<a href="javascript:;" title="第5集 高等数学之微分学">第5集 高等数学之微分学微分学</a><i></i>
+							    </li>
+								<li class="notplaying">
+									<a href="javascript:;" title="第6集 高等数学之微分学">第6集 高等数学之微分学微分学微分学</a><i></i>
+								</li>
+								<li class="notplaying">
+									<a href="javascript:;" title="第7集 高等数学之微分学">第7集 高等数学之微分学</a><i></i>
+								</li>
+								<li class="notplaying">
+									<a href="javascript:;" title="第8集 高等数学之微分学">第8集 高等数学之微分学微分学</a><i></i>
+								</li>
+								<li class="notplaying">
+									<a href="javascript:;" title="第9集 高等数学之微分学">第9集 高等数学之微分学微分学</a><i></i>
+								</li>
+								<li class="notplaying">
+									<a href="javascript:;" title="第10集 高等数学之微分学">第10集 高等数学之微分学微分学</a><i></i>
+								</li>
+							</ul>
+					   </div>
+					</div>
+				</div>
+		    </div>
+	    </div>
+	    <!--课程详情和评论 提问-->
+		<div class="play-kcjs clearfix">
+			<!--左边内容部分-->
+			<div class="play-left">
+				<div class="left-tabs">
+					<ul>
+						<li class="kcsm left-active">课程详情</li>
+						<li class="kcsm">课程评论</li>
+						
+					</ul>
+				</div>
+				<div class="left-box">
+					<!--课程详情-->
+					<div class="left-con">
+						<div class="left-kcxq">
+							<div class="kcxq-img"></div>
+							<div class="kcxq-img"></div>
+						</div>
+					</div>
+					<!--课程评论-->
+					<div class="left-con">
+						<div class="left-kcpl">
+							<!--发表评论-->
+							<div class="kcpl-txts">
+								<dl>
+									<dt>
+										<span><img src="" /></span>
+									</dt>
+									<dd>
+										<form action="" method="post">
+											<textarea name="" rows="" cols="" placeholder="我认为..."></textarea>
+											<p><input type="submit" value="发表评论"/ style="background: #d21313;color: #fff;"></p>
+										</form>
+									</dd>
+								</dl>
+							</div>
+							<!--评论展示-->
+							<div class="kcpl-con">
+								<dl>
+									<dt><span></span></dt>
+									<dd>
+										<h5>用户001</h5>
+										<div class="kcpl-item">
+											<p>用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论</p>
+											<div class="kcpl-item-xq">
+												<div class="time">2017-08-29</div>
+												<div class="item-thumbs-up">
+													<span class="pldz"></span>
+													<span class="num">7683</span>
+													
+												</div>
+											</div>
+										</div>
+									</dd>
+								</dl>
+								<dl>
+									<dt>
+										<span><img src="" /></span>
+									</dt>
+									<dd>
+										<h5>用户001</h5>
+										<div class="kcpl-item">
+											<p>用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论</p>
+											<div class="kcpl-item-xq">
+												<div class="time">2017-08-29</div>
+												<div class="item-thumbs-up">
+													<span class="pldz"></span>
+													<span class="num">7683</span>
+													
+												</div>
+											</div>
+										</div>
+									</dd>
+								</dl>
+								<dl>
+									<dt><span></span></dt>
+									<dd>
+										<h5>用户001</h5>
+										<div class="kcpl-item">
+											<p>用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论</p>
+											<div class="kcpl-item-xq">
+												<div class="time">2017-08-29</div>
+												<div class="item-thumbs-up">
+													<span class="pldz"></span>
+													<span class="num">7683</span>
+													
+												</div>
+											</div>
+										</div>
+									</dd>
+								</dl>
+								<dl>
+									<dt><span></span></dt>
+									<dd>
+										<h5>用户001</h5>
+										<div class="kcpl-item">
+											<p>用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论</p>
+											<div class="kcpl-item-xq">
+												<div class="time">2017-08-29</div>
+												<div class="item-thumbs-up">
+													<span class="pldz"></span>
+													<span class="num">7683</span>
+													
+												</div>
+											</div>
+										</div>
+									</dd>
+								</dl>
+								<dl>
+									<dt><span></span></dt>
+									<dd>
+										<h5>用户001</h5>
+										<div class="kcpl-item">
+											<p>用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论</p>
+											<div class="kcpl-item-xq">
+												<div class="time">2017-08-29</div>
+												<div class="item-thumbs-up">
+													<span class="pldz"></span>
+													<span class="num">7683</span>
+													
+												</div>
+											</div>
+										</div>
+									</dd>
+								</dl>
+							</div>
+						    <!--分页器-->
+						    <div class="pager">
+		    			    	<ul class="page clearfix" maxshowpageitem="5" pagelistcount="10"  id="page3"></ul>
+		    			    </div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<!--右边内容部分-->
+			<div class="play-right">
+				<div class="right-top">
+					<div class="right-head">
+						<h4>相关课程</h4>
+					</div>
+					<div class="right-con">
+						<ul>
+							<li>
+								<div class="xgkc"><a href="javascript:;"></a></div>
+								<div class="xgkc-list">
+									<h6>火线救援之考研政治</h6>
+									<p>
+										
+										<span class=""></span>
+										<span>54321</span>
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="xgkc"><a href="javascript:;"></a></div>
+								<div class="xgkc-list">
+									<h6>火线救援之考研政治</h6>
+									<p>
+										
+										<span class=""></span>
+										<span>54321</span>
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="xgkc"><a href="javascript:;"></a></div>
+								<div class="xgkc-list">
+									<h6>火线救援之考研政治</h6>
+									<p>
+										
+										<span class=""></span>
+										<span>54321</span>
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="xgkc"><a href="javascript:;"></a></div>
+								<div class="xgkc-list">
+									<h6>火线救援之考研政治</h6>
+									<p>
+										
+										<span class=""></span>
+										<span>54321</span>
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="xgkc"><a href="javascript:;"></a></div>
+								<div class="xgkc-list">
+									<h6>火线救援之考研政治</h6>
+									<p>
+										
+										<span class=""></span>
+										<span>54321</span>
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="xgkc"><a href="javascript:;"></a></div>
+								<div class="xgkc-list">
+									<h6>火线救援之考研政治</h6>
+									<p>
+										
+										<span class=""></span>
+										<span>54321</span>
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="xgkc"><a href="javascript:;"></a></div>
+								<div class="xgkc-list">
+									<h6>火线救援之考研政治</h6>
+									<p>
+										
+										<span class=""></span>
+										<span>54321</span>
+									</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<!--底部-->
+    <div class="footer">
+		<div class="content">
+			<div class="con footer-con" style="width: 1200px;">
+				<div class="section">
+					<div class="footer_left">
+						<a href="about/about.html" target="_blank">关于我们</a>
+						<a href="about/cooperation.html" target="_blank">联系我们</a>
+						<a href="about/propaganda.html" target="_blank">产品宣传片</a>
+					</div>
+					<!--<div class="footer_right">
+						<a href="javascript:;">sub</a>
+						<a href="javascript:;">sub</a>
+						
+					</div>-->
+				</div>
+				<div class="section">
+					<a href="http://www.miitbeian.gov.cn">
+					    <p class="copy">&copy; shoutike.com 京ICP备16043579号-1</p>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--登录注册页面-->
+<div class="login">
+	<div class="login-header">
+		<div class="login-tab">
+			<span class="active-title">登录</span>
+			<span>注册</span>
+		</div>
+		<span class="btn-close"></span>
+	</div>
+	<!--登录-->
+	<div class="login-con logreg-active">
+		<form action="" method="post" id="login-form">
+			<div class="call">
+				<input type="text" placeholder="请输入登录手机号" class="username" id="UserName" />
+				<p></p>
+			</div>
+			<div class="pass">
+				<input type="password" placeholder="6-16位密码，区分大小写，不能用空格" class="password" id="login-pass" />
+				<p></p>
+			</div>
+			<div class="forget"><span class="cursor login-forget">忘记密码</span></div>
+			<input type="submit" value="登录" class="login-btn" />
+		</form>
+		<div class="qt-login">
+			<h6>其他方式登录：
+				<span>
+					<a href="http://www.shoutike.com/account/wxlogin" connect="wechat" config=" 'cp': 0, 'cpp': 0, 'width': 400, 'height': 570, 'title': '微信' " title="用微信扫码登录" charset="hz-4009931-1000494">微信</a>
+				</span>
+				<span>
+					<a href="http://www.shoutike.com/account/qqlogin" connect="qzone" config=" 'cp': 1000208, 'cpp': 4001521, 'width': 710, 'height': 400, 'title': '腾讯QQ' " title="用QQ账号登录" charset="hz-4003757-1000494">QQ</a>
+				</span>
+				<span>
+					<a href="http://www.shoutike.com/account/wblogin" connect="weibo" config=" 'cp': 1000208, 'cpp': 4002404, 'width': 950, 'height': 700, 'title': '微博' " title="用新浪微博账号登录" charset="hz-4003755-1000494">微博</a>
+				</span>
+			</h6>
+		</div>
+	</div>
+	<!--注册-->
+	<div class="login-con">
+		<form action="" method="post" id="reg-form">
+			<div class="call">
+				<input type="text" placeholder="请输入注册手机号" class="username" id="myUserName" />
+				<p></p>
+			</div>
+			<div class="xym">
+				<input type="text" id="code" class="" placeholder="请输入右边的校验码" onblur="checkCode($('#codeSpan'));" />
+				<span id="codeSpan" onclick="createCode($('#codeSpan'));"></span>
+				<span id="cSpan"></span>
+			</div>
+			<div class="yzm">
+				<input type="text" placeholder="请输入短信验证码" disabled="disabled" id="CheckCode" name="" />
+				<a href="javascript:;" class="yzm-btn" id="getKey">获取验证码</a>
+				<span id="randomSpan"></span>
+			</div>
+			<div class="pass">
+				<input type="password" placeholder="设置6-16位密码，区分大小写，不能用空格" class="password" id="zc-pass" />
+				<p></p>
+			</div>
+			<div class="stk-tk">
+				<span><input type="checkbox" checked="checked" name="" id="agree-check" data-check="true" value="" /></span>
+				<span>我已阅读并接受《手提课协议条款》</span>
+			</div>
+			<input type="submit" value="注册" id="zc-btn" />
+		</form>
+		<div class="qt-login">
+			<h6>其他方式登录：
+				<span>
+					<a href="http://www.shoutike.com/account/wxlogin" connect="wechat" config=" 'cp': 0, 'cpp': 0, 'width': 400, 'height': 570, 'title': '微信' " title="用微信扫码登录" charset="hz-4009931-1000494">微信</a>
+				</span>
+				<span>
+					<a href="http://www.shoutike.com/account/qqlogin" connect="qzone" config=" 'cp': 1000208, 'cpp': 4001521, 'width': 710, 'height': 400, 'title': '腾讯QQ' " title="用QQ账号登录" charset="hz-4003757-1000494">QQ</a>
+				</span>
+				<span>
+					<a href="http://www.shoutike.com/account/wblogin" connect="weibo" config=" 'cp': 1000208, 'cpp': 4002404, 'width': 950, 'height': 700, 'title': '微博' " title="用新浪微博账号登录" charset="hz-4003755-1000494">微博</a>
+				</span>
+			</h6>
+		</div>
+	</div>
+</div>
+<!--完善资料-->
+<div class="register-next">
+	<div class="reg-head">注册成功！请完善资料！</div>
+	<div class="reg-con">
+		<form action="">
+			<div class="nickname">
+				<input type="text" placeholder="昵称" />
+				<p></p>
+			</div>
+			<div class="name">
+				<input type="text" placeholder="真实姓名" />
+				<p></p>
+			</div>
+			<div class="sex-bir">
+				<div class="sex">
+					<select name="性别" placeholder="性别">
+						<option value="性别">性别</option>
+						<option value="男">男</option>
+						<option value="女">女</option>
+					</select>
+				</div>
+				<div class="birthday">
+					<input type="text" class="date" readonly="readonly" placeholder="请输入出生年月日" />
+				</div>
+			</div>
+			<div class="seat">
+				<div class="info">
+					<div>
+						<select id="s_province" name="s_province"></select> 
+						<select id="s_city" name="s_city" ></select>
+						<select id="s_county" name="s_county"></select>
+						<script class="resources library" src="../jscript/area.js" type="text/javascript"></script>
+						<script type="text/javascript">
+							var opt0 = ["山西省","太原市","迎泽区"];//初始值
+							_init_area();
+						</script>
+					</div>
+				    <div id="show"></div>
+				
+				</div>
+			</div>
+			<div class="grade">
+				<select name="" id="">
+					<option>教育阶段</option>
+					<option>小学</option>
+					<option>初中</option>
+					<option>高中</option>
+				</select>
+				<select name="" id="">
+					<option>年级</option>
+					<option>一年级</option>
+					<option>二年级</option>
+					<option>三年级</option>
+					<option>四年级</option>
+					<option>五年级</option>
+					<option>六年级</option>
+					<option>初一</option>
+					<option>初二</option>
+					<option>初三</option>
+					<option>高一</option>
+					<option>高二</option>
+					<option>高三</option>
+				</select>
+				<input type="text" placeholder="所在学校"/>
+			</div>
+			<div class="teacher">
+				<input type="text" name="" id="" value="" placeholder="班主任" />
+			</div>
+			<div class="fpyhm">
+				<input type="text" name="" id="fpyhm" value="" placeholder="免费学习验证码(输入验证码免费学习课程)" />
+				<p style="color: red;"></p>
+			</div>
+			<div class="tjzl">
+				<input type="submit" value="提交资料" id="tjzl" />
+			    <span class="cursor">跳过</span>
+			</div>
+			<b>完善资料即可获赠10元奖学金，奖学金可用来购买课程</b>
+		</form>
+	</div>
+</div>
+<!--忘记密码-->
+<div class="forgetpass">
+	<div class="forget-head">
+		<h4>找回密码</h4>
+		<span class="btn-close">x</span>
+	</div>
+	<div class="forget-con">
+		<form action="" method="post" id="forget-form">
+			<div class="call">
+				<input type="text" placeholder="请输入注册手机号" class="username" id="forget-call" />
+				<p></p>
+			</div>
+			<div class="xym">
+				<input type="text" id="forget-code" class="" placeholder="请输入右边的校验码" onblur="checkCode($('#forget-codeSpan'));" />
+				<span id="forget-codeSpan" onclick="createCode($('#forget-codeSpan'));"></span>
+				<span id="forget-cSpan"></span>
+			</div>
+			<div class="yzm">
+				<input type="text" placeholder="请输入短信验证码" disabled="disabled" id="forget-CheckCode" name="" />
+				<a href="javascript:;" class="yzm-btn" id="forget-getKey">获取验证码</a>
+				<span id="forget-randomSpan"></span>
+			</div>
+			<div class="pass">
+				<input type="password" placeholder="设置8-16位密码，区分大小写，不能用空格" class="password" id="forget-pass" />
+				<p></p>
+			</div>
+			<input type="submit" value="找 回 密 码" id="forget-btn" />
+		</form>
+	</div>
+</div>
+<div class="login-mask"></div>
+</body>
+</html>
+<script type="text/javascript" src="../jscript/jquery-2.0.3.js"></script>
+<script type="text/javascript" src="../jscript/jquery.cookie.js"></script>
+<script type="text/javascript" src="../jscript/page.js"></script>
+<script type="text/javascript" src="../jscript/moment.min.js"></script>
+<script type="text/javascript" src="../jscript/moment.zh-cn.js"></script>
+<script type="text/javascript" src="../jscript/ion.calendar.min.js"></script>
+<script type="text/javascript" src="../jscript/area.js"></script>
+<script type="text/javascript" src="../js/public.js"></script>
+<script type="text/javascript" src="../js/login-public.js"></script>
+<script type="text/javascript" src="../js/play.js"></script>
+<script type="text/javascript">
+	
+	$('#CuPlayerVideo_video').height('512px');
+	//分页效果
+    function tt(dd){
+          alert(dd);
+    }
+//  maxshowpageitem ：最多显示的页码数字，必需写 。     pagelistcount:每一个页面显示的数据的个数，必需写。      id:不用解释了吧，必需。三、初始化分页
+    var GG = {
+        "kk":function(mm){
+            alert(mm);
+              console.log("hellos");
+//            window.location.href="test.html?page="+mm;
+        }
+    }
+    //调用分页的方法 参数 （3个参数） 第一个 所有数据条数  第二个默认第一页  第三个调用GG的kk方法 回调函数 进入第几页面
+    $("#page").initPage(100,1,GG.kk);
+    /*$("#page1").initPage(100,1,GG.kk);*/
+   
+    $("#page2").initPage(60,1,GG.kk);
+    
+    $("#page3").initPage(40,1,GG.kk);
+   
+</script>
+<!--视频播放-->
+<script type="text/javascript">
+	
+ChangeCurr();
+
+function getNext(pars) {
+    var url = $("#nextUrl").val();
+    if (url == undefined || url == "") {
+        return false;
+    }
+    window.location = url;
+}
+
+function ChangeCurr() {
+	
+    var video_index = $("#curr").val();
+    $(".list li").addClass('playering');
+    $(".list li").eq(video_index).addClass('playering');
+    LeftScr(video_index);
+}
+
+function LeftScr(m) {
+    var scrtop;
+    if (m > 1) {
+        scrtop = 76 * (m - 1);
+    } else {
+        scrtop = 0;
+    }
+    $(".list").animate({
+        scrollTop: scrtop
+    }, 130);
+}
+function share(t) {
+    var url = "/Share/Share?i=nct1LqfUAA7c0DiYNZ1sZw..&t=" + t;
+    window.open(url);
+}
+//如果当前播放列表是正在播放的视频 就添加播放焦点
+//$('.list li').each(function(){
+//	if($(this).attr('data-id') == $(this).attr('value')){
+//		$('.list li').removeClass('playering');
+//		$(this).addClass('playering');
+//	}
+//	
+//});
+    
+</script>

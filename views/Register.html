@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<meta http-equiv="content-type" content="text/htm" charset="utf-8" />
+<meta name="keywords" content="shoutike" />
+<meta name="description" content="shoutike" />
+<meta mame="viewport" content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1"  />	
+<link rel="stylesheet" href="../css/Login_page.css"  /> 
+<script type="text/javascript" src="../jscript/jquery-2.0.3.js"></script>
+<script type="text/javascript" src="../js/Register.js"></script> 
+<style type="text/css">
+	#showdiv{
+		float: left;
+	}
+</style>
+</head>
+<body onload="createCode()">
+<div class="wrap">
+	<div class="header"></div>
+	 <div class="screen">
+        <div class="passport-page signup-skin1">
+            <div class="stk-container">
+            	<div class="page-head">
+            		<h3>请注册</h3>
+            		<p>安全</p>
+            	</div>
+                <div class="center clearfix">
+                    <div class="loginbox">
+                        <div class="loginhead">
+                            <div class="title">请输入您的手机号码和验证码</div>
+                        </div>
+                        <div id="PageLogin">
+                            <section id="loginForm" class="formbox passport-inner">
+                           
+                                <form action="">
+                                	<div class="normalInput">
+                                		<input type="text" name="Telephone" maxlength="11" placeholder="手机号码" class="phone" id="Telephone" />
+                                	</div>
+                                	<span class="error error1">请输入手机号</span>
+                                	 <div id="showdiv" style="float: left;width: 74%;height: 25px;margin-bottom: 15px;">
+										<input type="text" name="code" id="code" value="" style="float: left;width: 80px;margin-right: 10px;height: 19px;line-height: 19px;" onblur="checkCode();" />
+										<span id="codeSpan" onclick="createCode();" style="float: left;background: #ccc;font-weight: 700;font-style: italic;padding: 0 10px;margin-right: 10px;height: 25px;line-height: 25px;"></span>
+										<span id="cSpan" style="float: left;padding: 0 5px;height: 25px;line-height: 25px;"></span>
+		                            </div>
+                                	<div class="normalInput">
+                                		<!--<input type="text" data-val="true" maxlength="4" data-val-required="验证码  字段是必需的。" disabled="disabled" id="CheckCode" name="CheckCode" placeholder="验证码" style="background: #fff;" />-->
+                                		<input type="text" disabled="disabled" id="CheckCode" name="CheckCode" placeholder="验证码" style="background: #fff;" />
+                                		<span class="formLine"></span>
+                                		<a href="#" id="getKey" class="linkABlue keycode" style="font-size: 14px;color: #000;">获取验证码</a>
+                                	</div>
+                                	<span class="error error2"></span>
+                                	<span class="error error3"></span>
+                                	<div class="rememberField">
+                                        <span class="checkboxPic check_chk" tabindex="-1" isshow="false">
+                                            <i class="i_icon"></i>
+                                        </span>
+                                        <label style="font-size: 14px;" class="pointer">我已阅读并接受</label>
+                                        <a href="#" style="font-size: 14px;" target="_blank" class="agree">《手提课协议条款》</a>
+                                    </div>
+                                	<input type="button" value="下一步" class="fullBtnBlue btnlogin" />
+                                </form>
+                                <div class="splitline-or"><span>或</span></div>
+                                <div class="thirdparties passport-inner" id="connectLoginArea">
+                                    <div class="main-links">
+                                        <ul class="clearfix">
+                                            <li><a href="http://www.shoutike.com/account/qqlogin" connect="qzone" config=" 'cp': 1000208, 'cpp': 4001521, 'width': 710, 'height': 400, 'title': '腾讯QQ' " title="用QQ账号登录" charset="hz-4003757-1000494"><i class="ico-QQ"></i><em>QQ账号登录</em></a></li>
+                                            <li><a href="http://www.shoutike.com/account/wxlogin" connect="wechat" config=" 'cp': 0, 'cpp': 0, 'width': 400, 'height': 570, 'title': '微信' " title="用微信扫码登录" charset="hz-4009931-1000494"><i class="ico-wechat"></i><em>微信扫码登录</em></a></li>
+                                            <li><a href="http://www.shoutike.com/account/wblogin" connect="weibo" config=" 'cp': 1000208, 'cpp': 4002404, 'width': 950, 'height': 700, 'title': '微博' " title="用新浪微博账号登录" charset="hz-4003755-1000494"><i class="ico-weibo"></i><em>用新浪微博账号登录</em></a></li>
+                                        </ul>
+                                    </div>
+                                </div> 
+                                
+                            </section>
+                        </div>
+                    </div>
+                    <div class="border"></div>
+                    <div class="yqts">
+                        <div style="margin-bottom: 62px;"><span>友情提示：<br />　　如果您已关注过微信公众号，请使用微信登录。<br />　　如果您已经在公众号上绑定过手机号，可通过<br />   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;忘记密码重置密码后，使用手机号进行登录。</span></div>
+						<div class="pub">
+							<p>关注公众号</p>
+							<img src="../img/icon/qrcode.jpg" alt="关注公众号" />
+							<b>用手机观看视频更便捷哦!</b>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	
+</body>
+</html>
+<script type="text/javascript">
+	/*创建验证码*/
+	function createCode(){
+		//创建4位验证码
+		var num=parseInt(Math.random()*9000+1000);
+		//获取span对象
+		var span=document.getElementById("codeSpan");
+		//将验证码存放进span标签中
+		span.innerHTML=num;
+		
+	}
+
+
+	/*封装校验代码*/
+	function checkField(id,regex){
+		//获取pwd标签对象
+		var inp=document.getElementById(id);
+		//获取用户密码信息
+		var val=inp.value;
+		//创建正则表达式
+		var regex=regex;
+		//获取span标签对象，用于存放校验信息
+		var span=document.getElementById(id+"Span");
+		//开始校验
+		if(val==""||val==null){
+			span.innerHTML="*"+inp.alt+"不能为空";
+			span.style.color="red";
+			return false;
+		}else if(regex.test(val)){
+			span.innerHTML="*"+inp.alt+"合法";
+			span.style.color="green";
+			return true;
+		}else{
+			span.innerHTML="*"+inp.alt+"不合法";
+			span.style.color="red";
+			return false;
+		}	
+	}
+
+
+	
+	/*验证码校验*/
+	function checkCode(){
+		//获取codeSpan对象
+		var codeSpan=document.getElementById("codeSpan");
+		//获取网页验证码信息
+		var wcode=codeSpan.innerHTML;
+		//获取code对象
+		var code=document.getElementById("code");
+		//获取用户书写的验证码
+		var ucode=code.value;
+		//获取span对象
+		var span=document.getElementById("cSpan");
+		//开始校验
+		if(ucode==""||ucode==null){
+			span.innerHTML="*验证码不能为空";
+			span.style.color="red";
+			return false;
+		}else if(ucode==wcode){
+			span.innerHTML="*验证码OK";
+			span.style.color="green";
+			return true;
+		}else{
+			span.innerHTML="*验证码不正确";
+			span.style.color="red";
+			return false;
+		}
+	}
+
+</script>

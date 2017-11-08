@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+
+	</style>
+</head>
+
+<body>
+	<ul>
+		<li>
+			
+			<a href="javasrcipt:;"></a>-->
+		</li>
+		<li></li>
+		<li></li>
+	</ul>
+</body>
+
+</html>
+<script type="text/javascript" src="jscript/jquery-2.0.3.js"></script>
+<script>
+
+
+var msg = [   {
+		    "typeName": "学前课程",
+			"id": 188,
+			"sort": null,
+			"identify": null,
+			"parentID": 0,
+			"children": [{
+				    "typeName": "国学",
+					"id": 191,
+					"sort": null,
+					"identify": null,
+					"parentID": 0,
+					"children": [{
+							
+							"typeName": "语文",
+							"id": 192,
+							"sort": null,
+							"identify": null,
+							"parentID": 0,
+							"children": []
+						},
+						{
+							
+							"typeName": "数学",
+							"id": 193,
+							"sort": null,
+							"identify": null,
+							"parentID": 0,
+							"children": []
+						},
+						{
+							
+							"typeName": "外语",
+							"id": 194,
+							"sort": null,
+							"identify": null,
+							"parentID": 0,
+							"children": []
+						}
+					],
+					
+				},
+				{
+					"typeName": "英语",
+					"id": 195,
+					"sort": null,
+					"identify": null,
+					"parentID": 0,
+					"children": [{
+						    "typeName": "基础1",
+							"id": 196,
+							"sort": null,
+							"identify": null,
+							"parentID": 0,
+							"children": []
+							
+						},
+						{
+							"typeName": "基础2",
+							"id": 197,
+							"sort": null,
+							"identify": null,
+							"parentID": 0,
+							"children": []
+							
+						}
+					],
+					
+				}
+			]
+			
+		},
+		{
+			"typeName": "小学课程",
+			"id": 189,
+			"sort": null,
+			"identify": null,
+			"parentID": 0,
+			"children": []
+			
+		},
+		{
+			"typeName": "初中课程",
+			"id": 190,
+			"sort": null,
+			"identify": null,
+			"parentID": 0,
+			"children": [{
+				    "typeName": "初一",
+					"id": 201,
+					"sort": null,
+					"identify": null,
+					"parentID": 0,
+					"children": [{
+						"children": [],
+						"typeName": "课程1",
+						"id": 203,
+						"sort": null,
+						"identify": null,
+						"parentID": 0
+					}],
+					
+				},
+				{
+					"typeName": "初二",
+					"id": 202,
+					"sort": null,
+					"identify": null,
+					"parentID": 0,
+					"children": []
+					
+				}
+			],
+			
+		}
+	]
+
+	 ;
+	var str = '';
+	$('ul').html('');
+	for(var i = 0; i < msg.length; i++) {
+		str += `
+		<li class="menunav">
+			<h5><a href="views/subpage.html" target="_blank">${msg[i].typeName}</a></h5>
+			<div class="listmenu" style="display: block">
+
+			</div>
+		</li>`;
+	};
+	$('ul').html(str);
+	
+	test();
+
+	
+	function test(arr, ele) {
+		var str = '';
+		for(var i = 0; i < arr.length; i++) {
+			ele.innerHTML = '';
+			console.log(key);
+			str += '<a href="javascript:;">' + arr[i].typeName + '</a>';
+		}
+		ele.innerHTML = str;
+	}
+</script>
