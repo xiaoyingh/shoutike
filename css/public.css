@@ -170,8 +170,14 @@ body{
 .header .nav-login li a{
 	color: #fff;
 	display: block;
+	padding-left: 10px;
+	height: 40px;
+}
+.header .nav-login li a img{
 	width: 40px;
 	height: 40px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
 }
 .header a:hover,.footer a:hover{
 	text-decoration: none;
