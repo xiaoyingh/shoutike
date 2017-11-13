@@ -550,3 +550,11 @@ function yhm(obj){
     }
     return false;
 }
+
+//鼠标移入头像出现个人中心和退出内容
+$('.nav-img').on('mouseover',function(){
+	$('.nav-img-con').show();
+});
+$('.nav-img').on('mouseout',function(){
+	$('.nav-img-con').hide();
+});

@@ -152,9 +152,11 @@ $(window).scroll(function(){
 
 //课程分类鼠标移入效果
 
-$('.kcfl-title').hover(function(){
+$('.kc_mask').hover(function(){
 	$(this).prev('img').css('transform','scale(1.4)');
+	$(this).css('background','rgba(0,0,0,.3)');
 },function(){
 	$(this).prev('img').css('transform','');
+	$(this).css('background','');
 });
 

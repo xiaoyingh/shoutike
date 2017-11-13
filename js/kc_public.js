@@ -78,7 +78,7 @@ function kchover(obj){
 			$(this).css('box-shadow','5px 0px 10px rgba(0,0,0,0.2)');
 			$(this).css('-webkit-box-shadow','5px 0px 10px rgba(0,0,0,0.2)');
 			$(this).find('.titles').css('color','#d21213');
-			$(this).find('.titles em').css('color','#d21213');
+			$(this).find('.kcsm p em').css('color','#333');
 		},function(){
 			$(this).find('.kcmask').animate({height:'0px'});
 			$(this).find('.kcmask').hide();
@@ -98,7 +98,7 @@ function kchover(obj){
 			$(this).css('box-shadow','');
 			$(this).css('-webkit-box-shadow','');
 			$(this).find('.titles').css('color','#333');
-			$(this).find('.titles em').css('color','#666');
+			$(this).find('.kcsm p em').css('color','#666');
 		});
 	});
 	

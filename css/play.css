@@ -100,6 +100,12 @@
 	float: left;
 	border-right: 1px solid #fff;
 }
+.player .myfx p a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+}
 .player .myfx p.shopping{
 	width: 30px;
 	float: left;
@@ -296,7 +302,6 @@
 .play-con .note-con .note-search{
 	width: 100%;
 	padding: 4px 10px;
-	
 }
 .play-con .note-con .note-search input{
 	width: 100%;
@@ -731,6 +736,10 @@
 	display: block;
 	width: 128px;
 	height: 80px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+.play-right .right-top .right-con .xgkc a img{
 	border-radius: 5px;
 	-webkit-border-radius: 5px;
 }

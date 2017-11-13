@@ -336,7 +336,7 @@
 			            <div class="bar-right">
 			                <div class="nowMoney clearfix">
 			                	<div class="totalMoney">总计金额: <strong class="total_text" id="lastMoney">￥78.79</strong></div>
-			                    <div class="calBtn"><a href="javascript:;">立即支付</a></div>
+			                    <div class="calBtn"><a href="wxsmzf.html" target="_blank">立即支付</a></div>
 			                </div>
 			            </div>
 			        </div>
@@ -384,19 +384,24 @@
 	});
 	
 	$('.calBtn a').on('click',function(){
-		
-		if($('.zf-active').html() == '微信支付'){
-			alert('微信支付');
-			return;
-			$(this).href('');
-		}else{
-			alert('支付宝支付');
-			return;
-			$(this).href('');
-		}
+		alert('微信支付');
+//		if($('.zf-active').html() == '微信支付'){
+//			alert('微信支付');
+//			return;
+//			$(this).href('');
+//		}else{
+//			alert('支付宝支付');
+//			return;
+//			$(this).href('');
+//		}
 	});
+
+
 	
-	function a(){
+	
+	
+	
+function a(){
 	var b=true;
 	return b;
 }
