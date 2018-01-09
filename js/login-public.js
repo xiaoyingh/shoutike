@@ -1,3 +1,10 @@
+//搜索框获取焦点
+$('.form-text').focus(function(){
+	$(this).next().addClass('submit-focus');
+});
+$('.form-text').blur(function(){
+	$(this).next().removeClass('submit-focus');
+});
 //登录注册
 $('.login-tab span').on('click',function(){
 	$('.login-tab span').removeClass('active-title');
@@ -6,17 +13,13 @@ $('.login-tab span').on('click',function(){
 	$('.login-con').eq($(this).index()).addClass('logreg-active');
 });
 //点击顶部导航的登录 注册效果
-$('.nav-login .nav-dlzc').on('click',function(){
-//	console.log($('.nav-login .nav-dlzc'));
-//	console.log($('.nav-login .nav-dlzc').length);
-//	console.log($(this).html());
-//	console.log($(this).index()-1);
+$('.nav-dlzc li').on('click',function(){
 	$('.login-mask').css('display','block');
 	$('.login').css('display','block');
 	$('.login-tab span').removeClass('active-title');
-	$('.login-tab span').eq($(this).index()-1).addClass('active-title');
+	$('.login-tab span').eq($(this).index()).addClass('active-title');
 	$('.login .login-con').removeClass('logreg-active');
-	$('.login .login-con').eq($(this).index()-1).addClass('logreg-active');
+	$('.login .login-con').eq($(this).index()).addClass('logreg-active');
 });
 //点击登录的 关闭按钮
 $('.btn-close').on('click',function(){
@@ -81,7 +84,6 @@ $('#RememberMe').change(function(){
 });
 
 //登录页面的 点击登录按钮
-
 $('#login-form').submit(function(e){
 	if(!checkPhone($("#UserName"))||!checkPass($("#login-pass"))){
 		e.preventDefault();
@@ -551,10 +553,23 @@ function yhm(obj){
     return false;
 }
 
-//鼠标移入头像出现个人中心和退出内容
-$('.nav-img').on('mouseover',function(){
-	$('.nav-img-con').show();
+//没有成为VIP 鼠标移入头像出现个人中心和退出内容
+$('#not-vip .nav-img').on('mouseover',function(){
+	$('#not-vip .nav-img-con').show();
 });
-$('.nav-img').on('mouseout',function(){
-	$('.nav-img-con').hide();
+$('#not-vip .nav-img').on('mouseout',function(){
+	$('#not-vip .nav-img-con').hide();
+});
+//成为VIP 鼠标移入头像出现个人中心和退出内容
+$('#vipok').hover(function(){
+	$('#vipok .nav-img-con').show();
+},function(){
+	$('#vipok .nav-img-con').hide();
+});
+
+//鼠标移入VIP效果
+$('.nav-vip a').hover(function(){
+	$(this).css('color','#d21213');
+},function(){
+	$(this).css('color','#fff');
 });

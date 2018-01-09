@@ -24,17 +24,131 @@ $('.left-tabs .kcsm').on('click',function(){
 });
 
 //评论点赞
-$('.pldz').attr('data-btn','false');
+var cid=$("#cid").val();
+	
+var uid=$("#uid").val();
+
+var addzan={
+		url:"addzan.action?cid="+cid+"&uid="+uid,
+        type: "POST",  
+        dataType: 'json',    	
+};
+var deletezan={
+		url:"deleteZan.action?cid="+cid+"&uid="+uid,
+        type: "POST",  
+        dataType: 'json',
+};
+$('.pldz').each(function(){
+	if($(this).attr('data-btn') == 'true'){
+		$(this).css('background-position-x','-152px');
+		}else{
+		
+		$(this).css('background-position-x','-130px');
+		}
+});
 $('.pldz').on('click',function(){
 	if($(this).attr('data-btn') == 'false'){
+//		 $.ajax(addzan); 
 		var num = parseInt($(this).next().html());
 		$(this).attr('data-btn','true');
 		$(this).css('background-position-x','-152px');
 		$(this).next().html(num+1);
 	}else{
+//		 $.ajax(deletezan); 
 		var num = parseInt($(this).next().html());
 		$(this).attr('data-btn','false');
 		$(this).css('background-position-x','-130px');
 		$(this).next().html(num-1);
 	}
+
+});
+
+
+//视频点赞
+var uid=$("#uid").val();
+var vid=$("#vid").val();
+
+var addzan={
+		url:"addzan.action?uid="+uid+"&vid="+vid,
+        type: "POST",  
+        dataType: 'json',    	
+};
+var deletezan={
+		url:"deleteZanvo.action?uid="+uid+"&vid="+vid,
+        type: "POST",  
+        dataType: 'json',
+};
+//页面刚刷新根据属性 判断出现是否点赞图标
+$('.pldz-vo').each(function(){
+	if($(this).attr('data-btn') == 'true'){
+		$(this).css('background-position-x','-152px');
+		}else{
+		
+		$(this).css('background-position-x','-130px');
+		}
+});
+//点赞 取消点赞
+$('.pldz-vo').on('click',function(){
+	
+	if($(this).attr('data-btn') == 'false'){
+		
+//		 $.ajax(addzan); 
+		 
+		var num = parseInt($(this).next().html());
+		$(this).attr('data-btn','true');
+		$(this).css('background-position-x','-152px');
+		$(this).next().html(num+1);
+		
+	}else{
+//		 $.ajax(deletezan); 
+		var num = parseInt($(this).next().html());
+		$(this).attr('data-btn','false');
+		$(this).css('background-position-x','-130px');
+		$(this).next().html(num-1);
+	}
+
+});
+
+
+//收藏点赞
+var uid=$("#uid").val();
+var vid=$("#vid").val();
+
+var addzancoll={
+		url:"addCollects.action?uid="+uid+"&vid="+vid,
+		
+        type: "POST",  
+        dataType: 'json',    	
+};
+var deletezancoll={
+		url:"deleteCollect.action?uid="+uid+"&vid="+vid,
+        type: "POST",  
+        dataType: 'json',
+};
+//页面刚刷新根据属性 判断出现是否收藏图标
+$('.pldz-coll').each(function(){
+	if($(this).attr('data-btn') == 'true'){
+		$(this).css('background-position-x','-152px');
+		}else{
+		
+		$(this).css('background-position-x','-130px');
+		}
+});
+//点击收藏 取消收藏
+$('.pldz-coll').on('click',function(){
+	if($(this).attr('data-btn') == 'false'){
+//		 $.ajax(addzancoll); 
+		var num = parseInt($(this).next().html());
+		$(this).attr('data-btn','true');
+		$(this).css('background-position-x','-152px');
+		$(this).next().html(num+1);
+		
+	}else{
+//		 $.ajax(deletezancoll); 
+		var num = parseInt($(this).next().html());
+		$(this).attr('data-btn','false');
+		$(this).css('background-position-x','-130px');
+		$(this).next().html(num-1);
+	}
+
 });

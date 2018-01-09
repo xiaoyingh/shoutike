@@ -47,14 +47,14 @@
 	height: 18px;
 	padding: 0 5px;
 }
-.player .myfx div span.pldz{
+.player .myfx div span.pldz,.player .myfx div span.pldz-vo,.player .myfx div span.pldz-coll{
 	width: 20px;
 	background: url(../img/icon/stk-icon.png) no-repeat;
 }
-.player .myfx .thumb-up .pldz{
+.player .myfx .thumb-up .pldz-vo{
 	background-position: -130px 0px;
 }
-.player .myfx .collent .pldz{
+.player .myfx .collent .pldz-coll{
 	background-position: -130px -21px;
 }
 .player .myfx .share span{
@@ -84,7 +84,7 @@
 	text-align: center;
 	line-height: 30px;
 	color: #fff;
-	background: #d21213;
+	background: #d21313;
 	padding: 0;
 	/*border-radius: 5px;
 	-webkit-border-radius: 5px;*/
@@ -95,20 +95,20 @@
 	line-height: 26px;
 	color: #fff;
 }
+.player .myfx .shopp-buy p a{
+	display: block;
+	color: #fff;
+}
 .player .myfx p.buynow{
 	width: 108px;
 	float: left;
 	border-right: 1px solid #fff;
 }
-.player .myfx p a{
-	display: block;
-	width: 100%;
-	height: 100%;
-	color: #fff;
-}
 .player .myfx p.shopping{
 	width: 30px;
 	float: left;
+}
+.player .myfx p.shopping a{
 	padding: 5px;
 }
 .player .myfx p.shopping span{
@@ -302,6 +302,7 @@
 .play-con .note-con .note-search{
 	width: 100%;
 	padding: 4px 10px;
+	
 }
 .play-con .note-con .note-search input{
 	width: 100%;
@@ -414,7 +415,7 @@
 }
 .left-box{
 	width: 100%;
-	min-height: 532px;
+	min-height: 300px;
 	overflow: auto;
 }
 .left-box .left-con{
@@ -724,7 +725,6 @@
 	width: 128px;
 	height: 80px;
 	float: left;
-	background: #ccc;
 	border-radius: 5px;
 	-webkit-border-radius: 5px;
 }
@@ -736,10 +736,7 @@
 	display: block;
 	width: 128px;
 	height: 80px;
-	border-radius: 5px;
-	-webkit-border-radius: 5px;
-}
-.play-right .right-top .right-con .xgkc a img{
+	background: #ccc;
 	border-radius: 5px;
 	-webkit-border-radius: 5px;
 }

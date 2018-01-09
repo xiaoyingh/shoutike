@@ -6,6 +6,8 @@
 <meta http-equiv="content-type" content="text/htm" charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 <meta mame="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<link rel="shortcut icon" href="../img/icon/favicon.ico">
+<link rel="Bookmark" href="../img/icon/favicon.ico">
 <meta name="keywords" content="shoutike" />
 <meta name="description" content="shoutike" />
 <!--[if lt IE 9]>
@@ -17,6 +19,7 @@
 <link rel="stylesheet" type="text/css" href="../content/ion.calendar.css" />
 <link rel="stylesheet" type="text/css" href="../css/search_public.css" />
 <link rel="stylesheet" type="text/css" href="../css/subpage.css" />
+<link rel="stylesheet" type="text/css" href="../css/pagepublic.css"/>
 <style>
 	
 </style>
@@ -271,19 +274,89 @@
 			    </div>
 			</div>
 			<!--搜索-->
-			<form action="" class="navbar-form navbar-left" id="my-form">
-				<div class="input-group">
-					<input type="text" class="form-control" placeholder="search" style="width: 320px;" />
-				    <span class="input-group-addon"><a href="javascript:;"><span class="glyphicon glyphicon-search"></span></a></span>
+			<form action="" class="head-form" id="my-form">
+				<div class="head-input">
+					<input type="text" class="form-text" placeholder="search" />
+				    <span class="submit-mask"></span>
+				    <input type="submit" class="head-submit" value="" />
 				</div>
 			</form>
 			<!--登录注册-->
-			<ul class="nav-login">
-				<!--<li><a href="shopping.html" target="_blank"><span class="glyphicon glyphicon-shopping-cart"></span> 购物车</a></li>-->
-				<li></li>
-				<li class="nav-dlzc"><a href="javascript:;">登录</a></li>
-				<li class="nav-dlzc"><a href="javascript:;">注册</a></li>
-			</ul>
+			<!--<div style="display: none;">
+					<a href="views/shopping.html" target="_blank"><span class="glyphicon glyphicon-shopping-cart"></span> 购物车</a>
+			</div>-->
+			<div class="nav-login">
+				<!--初次加载页面未登录注册状态-->
+				<div class="dl-init">
+					<div class="not-vip">
+						<a href="member.html" target="_blank">开通VIP</a>
+					</div>
+					<ul class="nav-dlzc">
+						<li class="cursor">登录</li>
+						<li class="cursor">注册</li>
+					</ul>
+				</div>
+				<!--已登录注册状态 未成为VIP-->
+				<div class="dlzc-notvip" id="not-vip" style="display: none;">
+					<div class="not-vip">
+						<a href="member.html" target="_blank">开通VIP</a>
+					</div>
+					<div class="nav-img">
+						<div class="person-img">
+							<a href="personal.html"><img src=""/></a>
+						</div>
+						<div class="nav-img-con">
+							<div class="nav-tx">
+								<p><img src=""/></p>
+								<span><em class="ellipsis">猫了个牛牛</em></span>
+							</div>
+							<div class="nav-kcjl">
+								<a class="my-bfjl" href="javascript:;">
+									<h5><i></i><span>西医综合导学</span></h5>
+									<p><span>第3集 大纲串讲</span><span>继续</span></p>
+								</a>
+								<a class="my-sybf" href="personal.html">
+									查看所有播放记录
+								</a>
+							</div>
+							<div class="nav-colse">
+								<span class="cursor">安全退出</span>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<!--已登录注册状态 成为VIP-->
+				<div class="dlzc-vip" id="vipok" style="display: none;">
+					<div class="nav-vip">
+						<a href="javascript:;">我的VIP</a>
+					</div>
+					<div class="nav-img">
+						<div class="person-img">
+							<a href="personal.html"><img src=""/></a>
+						</div>
+						<div class="nav-img-con">
+							<div class="nav-tx">
+								<p><img src=""/></p>
+								<span><em class="ellipsis">猫了个牛牛</em><i></i></span>
+								<h6>VIP有效期至：2017-12-28</h6>
+							</div>
+							<div class="nav-kcjl">
+								<a class="my-bfjl" href="javascript:;">
+									<h5><i></i><span>西医综合导学</span></h5>
+									<p><span>第3集 大纲串讲</span><span>继续</span></p>
+								</a>
+								<a class="my-sybf" href="personal.html">
+									查看所有播放记录
+								</a>
+							</div>
+							<div class="nav-colse">
+								<span class="cursor">安全退出</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<!--countent-->
@@ -295,7 +368,7 @@
 					<div class="screen-content">
 						<dl class="clearfix">
 							<dt>品类</dt>
-							<dd>
+							<dd id="kcpl">
 								<a href="javascript:;" name="mode" class="all on">全部</a>
 								<a href="javascript:;" name="mode" class="sx_child">学前课程</a>
 								<a href="javascript:;" name="mode" class="sx_child">小学课程</a>
@@ -305,7 +378,7 @@
 						</dl>
 						<dl class="clearfix">
 							<dt>进度</dt>
-							<dd>
+							<dd id="kcjd">
 								<a href="javascript:;" name="stage" class="all on">全部</a>
 								<a href="javascript:;" name="stage" class="sx_child">一年级</a>
 								<a href="javascript:;" name="stage" class="sx_child">二年级</a>
@@ -329,7 +402,7 @@
 						</dl>
 						<dl class="clearfix">
 							<dt>科目</dt>
-							<dd>
+							<dd id="kcclass">
 								<a href="javascript:;" name="board" class="all on">全部</a>
 								<a href="javascript:;" name="board" class="sx_child">语文</a>
 								<a href="javascript:;" name="board" class="sx_child">数学</a>
@@ -413,7 +486,7 @@
 	    		    <!--综合-->
 	    			<div class="tabs-con con-active">
 	    				<div class="tabs-main">
-		    				<ul class="clearfix">
+		    				<ul class="clearfix" id="zhkc">
 		    					<li>
 		    						<a href="javascript:;">
 			    						<div class="kc">
@@ -964,6 +1037,7 @@
 	    			    <div class="pager">
 	    			    	<ul class="page clearfix" maxshowpageitem="5" pagelistcount="10"  id="page"></ul>
 	    			    </div>
+	    			    
 	    			</div>
 	    			<!--最热-->
 	    			<div class="tabs-con">
@@ -1460,6 +1534,7 @@
 	    				<div class="pager">
 	    			    	<ul class="page clearfix" maxshowpageitem="5" pagelistcount="10"  id="page3"></ul>
 	    			    </div>
+	    			    
 	    			</div>
 	    		</div>
 	    	</div>
@@ -1612,13 +1687,13 @@
 				</div>
 			</div>
 			<div class="grade">
-				<select name="" id="">
+				<select name="" id="jyjd">
 					<option>教育阶段</option>
 					<option>小学</option>
 					<option>初中</option>
 					<option>高中</option>
 				</select>
-				<select name="" id="">
+				<select name="" id="grade">
 					<option>年级</option>
 					<option>一年级</option>
 					<option>二年级</option>
@@ -1636,7 +1711,7 @@
 				<input type="text" placeholder="所在学校"/>
 			</div>
 			<div class="teacher">
-				<input type="text" name="" id="" value="" placeholder="班主任" />
+				<input type="text" name="" id="teacher" value="" placeholder="班主任" />
 			</div>
 			<div class="fpyhm">
 				<input type="text" name="" id="fpyhm" value="" placeholder="免费学习验证码(输入验证码免费学习课程)" />
@@ -1702,6 +1777,7 @@
 <script type="text/javascript" src="../js/kc_public.js"></script>
 <!--二级页面代码-->
 <script type="text/javascript" src="../js/subpage.js"></script>
+<script type="text/javascript" src="../js/subpagefenye.js"></script>
 <script type="text/javascript">
 	//分页效果
     function tt(dd){

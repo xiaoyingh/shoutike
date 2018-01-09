@@ -125,3 +125,5 @@ $('.set-pass').on('click',function(){
 	$('.person-mask').css('display','block');
 	$('.xgpass').css('display','block');
 });
+
+

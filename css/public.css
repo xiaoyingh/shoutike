@@ -4,6 +4,7 @@ body,p,h1,h2,h3,h4,h5,h6,p,ul,li,ol,li,dl,dt,dd,th,td{
 }
 body,textarea,select{
 	font-family: "微软雅黑";
+	font-size: 12px;
 }
 ul,li,ol,li{
 	list-style: none;
@@ -56,6 +57,49 @@ input::-webkit-input-placeholder{
 .clearfix{
 	zoom: 1;
 }
+*{
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/*文本超出显示省略号*/
+.ellipsis {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/*弹性盒模型 兼容*/
+.flex{
+	display: -webkit-flex;  /* 新版本语法: Chrome 21+ */
+    display: flex;          /* 新版本语法: Opera 12.1, Firefox 22+ */
+    display: -webkit-box;   /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box;      /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox;   /* 混合版本语法: IE 10 */   
+}
+/*弹性盒模型 子元素*/
+.flexchild {            
+    -webkit-flex: 1;        /* Chrome */  
+    -ms-flex: 1             /* IE 10 */  
+    flex: 1;                /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    -webkit-box-flex: 1     /* OLD - iOS 6-, Safari 3.1-6 */  
+    -moz-box-flex: 1;       /* OLD - Firefox 19- */       
+}
+.flexcenter{
+	-webkit-justify-content:center;
+	justify-content:center;
+	-moz-box-pack:center;
+	-webkit--moz-box-pack:center;
+	box-pack:center;
+}
+
+.flexitem{
+	align-items:center;
+	-webkit-align-items:center;
+	box-align:center;
+	-moz-box-align:center;
+	-webkit-box-align:center;
+}
 /*媒体查询*/
 @media only screen and (min-width:1366px ) {
 	.header,.con,.icon,.bottom{
@@ -88,7 +132,7 @@ body{
 }
 /*顶部导航*/
 .navheader{
-	background: #151515;
+	background: #222;
 	width: 100%;
 	height: 50px;
 	position: fixed;
@@ -109,7 +153,7 @@ body{
 	position: absolute;
 	left: 140px;
 	top: 0;
-	width: 120px;
+	width: 180px;
 	height: 50px;
 }
 .header .stk-menu .head-menu span:first-child{
@@ -118,14 +162,14 @@ body{
 .header .stk-menu .head-menu span:last-child{
 	font-size: 12px;
 }
-.header .head-menu,.header #mymenu{
+.header .head-menu,.header #mymenu,.header .head-audio{
 	float: left;
 	width: 60px;
 	height: 50px;
 	line-height: 50px;
 	position: relative;
 }
-.header .head-menu>a,.header #mymenu>a{
+.header .head-menu>a,.header #mymenu>a,.header .head-audio a{
 	display: block;
 	width: 100%;
 	height: 100%;
@@ -137,57 +181,127 @@ body{
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	margin-left: -180px;
-	margin-top: -17px;
+	margin-left: -150px;
+	margin-top: -12px;
 	padding: 0;
-	width: 359px;
+	width: 270px;
+	height: 28px;
+}
+.head-form .head-input{
+	width: 270px;
+	height: 28px;
+	position: relative;
+}
+.head-form .head-input .form-text{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 270px;
+	height: 28px;
+	line-height: 28px;
+	padding: 0 12px;
+	background: #2d2d2d;
+	border: 0;
+	border-radius: 14px;
+	-webkit-border-radius: 14px;
+	color: #fff;
+}
+.head-form .head-input .form-text:focus{
+	border: 1px solid #fff;
+}
+.head-form .head-input .submit-mask{
+	position: absolute;
+	right: 2px;
+	top: 2px;
+	width: 40px;
+	height: 24px;
+	z-index: 8;
+	background: url(../img/icon/search.png) no-repeat center;
+}
+.head-form .head-input .submit-focus{
+	background: url(../img/icon/search01.png) no-repeat center;
+}
+.head-form .head-input .head-submit{
+	position: absolute;
+	right: 2px;
+	top: 2px;
+	width: 40px;
+	height: 24px;
+	z-index: 10;
+	opacity: 0;
+	border: none;
 }
 .header .nav-login{
 	float: right;
 	width: auto;
 	height: 50px;
-	display: flex;
 }
-/*.header form div .input-group-addon{
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: #ccc;
-    z-index: 10;
-    height: 33px;
-}*/
-.header .nav-login li{
-	justify-content: space-between;
-	padding: 0 10px;
+/*首次进入页面 未登录*/
+.header .nav-login .dl-init{
+	width: 200px;
 	height: 50px;
 	line-height: 50px;
 	text-align: right;
-	
 }
-.header .nav-login li:first-child{
-	background: url() no-repeat left;
+.header .nav-login .dlzc-notvip,.header .nav-login .dlzc-vip{
+	width: 140px;
+	height: 50px;
 }
-.header .nav-login li a{
+.header .nav-login .not-vip,.header .nav-login .nav-vip{
+	float: left;
+	width: 80px;
 	color: #fff;
+	height: 50px;
+	line-height: 50px;
+}
+.header .nav-login .not-vip a,.header .nav-login .nav-vip a{
 	display: block;
-	padding-left: 10px;
+	width: 80px;
+	color: #fff;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+}
+.header .nav-login .not-vip a:hover{
+	color: #d21213;
+}
+.header .nav-login .nav-dlzc{
+	float: left;
+	width: 120px;
+	height: 50px;
+}
+.header .nav-login .nav-dlzc li{
+	float: left;
+	width: 60px;
+	height: 50px;
+	line-height: 50px;
+	color: #fff;
+	text-align: center;
+}
+
+.header .nav-login .nav-img{
+	float: left;
+	position: relative;
+	width: 60px;
+	height: 50px;
+	padding: 5px 10px;
+}
+.header .nav-login .nav-img .person-img,.header .nav-login .nav-img .nav-tx{
+	width: 40px;
 	height: 40px;
 }
-.header .nav-login li a img{
+.header .nav-login .nav-img .person-img img,.header .nav-login .nav-img .nav-tx img{
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
 	-webkit-border-radius: 50%;
 }
-.header .nav-login .nav-img{
-	position: relative;
-}
 .header .nav-login .nav-img .nav-img-con{
 	display: none;
 	width: 190px;
-	height: 240px;
+	height: auto;
 	position: absolute;
-	left: -5px;
+	left: -80px;
 	top: 50px;
 	background: #fff;
 	border-radius: 5px;
@@ -196,24 +310,51 @@ body{
 	-webkit-box-shadow: 1px 0px 13px rgba(0,0,0,.4);
 	-moz-box-shadow: 1px 0px 13px rgba(0,0,0,.4);
 	-o-box-shadow: 1px 0px 13px rgba(0,0,0,.4);
-}	
+}
 .header .nav-login .nav-img .nav-img-con .nav-tx{
 	width: 100%;
 	height: 91px;
 	border-bottom: 1px solid #e9e9e9;
-	padding: 20px;
+	padding: 20px 20px 0;
+}
+.header .nav-login .dlzc-vip .nav-img .nav-img-con .nav-tx{
+	height: 115px;
 }
 .header .nav-login .nav-img .nav-img-con .nav-tx p{
+	float: left;
+	width: 50px;
+	height: 50px;
+}
+.header .nav-login .nav-img .nav-img-con .nav-tx p img{
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
 	-webkit-border-radius: 50%;
 }
-.header .nav-login .nav-img .nav-img-con .nav-tx img{
-	width: 50px;
+.header .nav-login .nav-img .nav-img-con .nav-tx span{
+	float: left;
+	width: 100px;
 	height: 50px;
-	border-radius: 50%;
-	-webkit-border-radius: 50%;
+	line-height: 12px;
+	padding: 19px 10px;
+}
+.header .nav-login .nav-img .nav-img-con .nav-tx span em{
+	float: left;
+	width: 60px;
+}
+.header .nav-login .nav-img .nav-img-con .nav-tx span i{
+	float: right;
+	width: 15px;
+	height: 12px;
+	background: url(../img/icon/vipnav.png) no-repeat center;
+}
+.header .nav-login .nav-img .nav-img-con .nav-tx h6{
+	float: left;
+	width: 100%;
+	height: 44px;
+	line-height: 44px;
+	color: #000;
+	font-size: 12px;
 }
 .header .nav-login .nav-img .nav-img-con .nav-kcjl{
 	width: 100%;
@@ -244,6 +385,7 @@ body{
 }
 .header .nav-login .nav-img .nav-img-con .nav-kcjl .my-bfjl h5 span{
 	float: left;
+	width: 120px;
 	height: 34px;
 	line-height: 40px;
 	color: #999;
@@ -254,12 +396,15 @@ body{
 }
 .header .nav-login .nav-img .nav-img-con .nav-kcjl .my-bfjl p span{
 	float: left;
+	width: 115px;
 	color: #666;
 	height: 34px;
 	line-height: 28px;
 }
 .header .nav-login .nav-img .nav-img-con .nav-kcjl .my-bfjl p span:last-child{
 	float: right;
+	width: 35px;
+	text-align: center;
 }
 .header .nav-login .nav-img .nav-img-con .nav-kcjl .my-sybf{
 	width: 130px;
@@ -281,6 +426,7 @@ body{
 	height: 30px;
 	line-height: 30px;
 	padding-left: 10px;
+	color: #000;
 }
 .header a:hover,.footer a:hover{
 	text-decoration: none;
@@ -467,6 +613,7 @@ body{
 /*底部*/
 .footer{
 	background: #fff;
+	font-size: 14px;
 }
 .footer .footer-con{
 	height: 80px;

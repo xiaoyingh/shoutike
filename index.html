@@ -14,7 +14,7 @@
 </script>
 <meta charset="utf-8" />
 <title>手提课-活到老学到老</title>
-<meta http-equiv="content-type" content="text/htm" charset="utf-8" />
+<meta http-equiv="content-type" content="text/html" charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 <meta mame="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 <meta name="keywords" content="2017考研,四六级考试,思维导图,学前,公务员考试,小学,初中,高中,考研专业课,考研公共课,高考,微商,中考,艺考,托福考试,雅思考试,法语口语" />
@@ -340,12 +340,16 @@
 						</div>
 					</div>
 			    </div>
+			    <div class="head-audio">
+					<a href="views/audio/audioindex.html" target="_blank">音频</a>
+				</div>
 			</div>
 			<!--搜索-->
-			<form action="" class="navbar-form navbar-left" id="my-form">
-				<div class="input-group">
-					<input type="text" class="form-control" placeholder="search" style="width: 320px;" />
-				    <span class="input-group-addon"><a href="javascript:;"><span class="glyphicon glyphicon-search"></span></a></span>
+			<form action="" class="head-form" id="my-form">
+				<div class="head-input">
+					<input type="text" class="form-text" placeholder="search" />
+				    <span class="submit-mask glyphicon glyphicon-search"></span>
+				    <input type="submit" class="head-submit" value="" />
 				</div>
 			</form>
 			<!--扶贫入口-->
@@ -353,30 +357,93 @@
 				<a href="views/FP/fpindex.html" class="navbar-brand" target="_blank"></a>
 			</div>
 			<!--登录注册-->
-			<ul class="nav-login">
-				<li><a href="views/shopping.html" target="_blank"><span class="glyphicon glyphicon-shopping-cart"></span> 购物车</a></li>
-				<!--<li></li>-->
-				<li class="nav-dlzc nav-img"><a href="javascript:;">登录</a>
-					<div class="nav-img-con">
-						<div class="nav-tx">
-							<p><img src=""/></p>
+			<!--<div style="display: none;">
+					<a href="views/shopping.html" target="_blank"><span class="glyphicon glyphicon-shopping-cart"></span> 购物车</a>
+			</div>-->
+			<div class="nav-login">
+				<!--初次加载页面未登录注册状态-->
+				<div class="dl-init">
+					<div class="not-vip">
+						<a href="views/member.html" target="_blank">开通VIP</a>
+					</div>
+					<ul class="nav-dlzc">
+						<li class="cursor">登录</li>
+						<li class="cursor">注册</li>
+					</ul>
+				</div>
+				<!--已登录注册状态 未成为VIP-->
+				<div class="dlzc-notvip" id="not-vip" style="display: none;">
+					<div class="not-vip">
+						<a href="views/member.html" target="_blank">开通VIP</a>
+					</div>
+					<div class="nav-img">
+						<div class="person-img">
+							<a href="views/personal.html"><img src=""/></a>
 						</div>
-						<div class="nav-kcjl">
-							<a class="my-bfjl" href="javascript:;">
-								<h5><i></i><span>西医综合导学</span></h5>
-								<p><span>第3集 大纲串讲</span><span>继续</span></p>
-							</a>
-							<a class="my-sybf" href="javascript:;">
-								查看所有播放记录
-							</a>
-						</div>
-						<div class="nav-colse">
-							<span class="cursor">安全退出</span>
+						<div class="nav-img-con">
+							<div class="nav-tx">
+								<p><img src=""/></p>
+								<span><em class="ellipsis">猫了个牛牛</em></span>
+							</div>
+							<div class="nav-kcjl">
+								<a class="my-bfjl" href="javascript:;">
+									<h5>
+										<i></i>
+										<span class="ellipsis">西医综合导学</span>
+									</h5>
+									<p>
+										<span class="ellipsis">第3集 大纲串讲</span>
+										<span>继续</span>
+									</p>
+								</a>
+								<a class="my-sybf" href="views/personal.html">
+									查看所有播放记录
+								</a>
+							</div>
+							<div class="nav-colse">
+								<span class="cursor">安全退出</span>
+							</div>
 						</div>
 					</div>
-				</li>
-				<li class="nav-dlzc"><a href="javascript:;">注册</a></li>
-			</ul>
+					
+				</div>
+				<!--已登录注册状态 成为VIP-->
+				<div class="dlzc-vip" id="vipok" style="display: none;">
+					<div class="nav-vip">
+						<a href="javascript:;">我的VIP</a>
+					</div>
+					<div class="nav-img">
+						<div class="person-img">
+							<a href="views/personal.html"><img src=""/></a>
+						</div>
+						<div class="nav-img-con">
+							<div class="nav-tx">
+								<p><img src=""/></p>
+								<span><em class="ellipsis">猫了个牛牛</em><i></i></span>
+								<h6>VIP有效期至：2017-12-28</h6>
+							</div>
+							<div class="nav-kcjl">
+								<a class="my-bfjl" href="javascript:;">
+									<h5>
+										<i></i>
+										<span class="ellipsis">西医综合导学</span>
+									</h5>
+									<p>
+										<span class="ellipsis">第3集 大纲串讲</span>
+										<span>继续</span>
+									</p>
+								</a>
+								<a class="my-sybf" href="views/personal.html">
+									查看所有播放记录
+								</a>
+							</div>
+							<div class="nav-colse">
+								<span class="cursor">安全退出</span>
+							</div>
+						</div> 
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="wrapper">
@@ -545,13 +612,18 @@
 					
 					</div>
 				</div>
+			    
+			    <div class="con" style="margin-bottom: 50px;padding: 0;">
+					<a href="views/FP/fpindex.html" class="fp" target="_blank"></a>
+				</div>
+			
 			</div>
 			<!--专题活动-->
-			<div class="content">
+			<!--<div class="content">
 				<div class="con">
 					<a href="views/FP/fpindex.html" class="fp" target="_blank"></a>
 				</div>
-			</div>
+			</div>-->
 			
 			<!--免费专区-->	
 			<div class="content">
@@ -586,7 +658,7 @@
 															<span>43543</span>
 														</p>
 														<p>
-															<em>￥19.99</em>
+															<em>免费</em>
 														</p>
 													</div>
 												</div>
@@ -610,7 +682,7 @@
 															<span>43543</span>
 														</p>
 														<p>
-															<em>￥19.99</em>
+															<em>免费</em>
 														</p>
 													</div>
 												</div>
@@ -634,7 +706,7 @@
 															<span>43543</span>
 														</p>
 														<p>
-															<em>￥19.99</em>
+															<em>免费</em>
 														</p>
 													</div>
 												</div>
@@ -658,7 +730,7 @@
 															<span>43543</span>
 														</p>
 														<p>
-															<em>￥19.99</em>
+															<em>免费</em>
 														</p>
 													</div>
 												</div>
@@ -877,7 +949,7 @@
 									                <div class="kcmask"></div>
 												</div>
 												<div class="texts">
-													<div class="titles">西医综合导学 </div>
+													<div class="titles ellipsis">西医综合导学 </div>
 													<div class="kcsm">
 														<p>
 															<span></span>
@@ -3269,13 +3341,13 @@
 				</div>
 			</div>
 			<div class="grade">
-				<select name="" id="">
+				<select name="grade" id="education">
 					<option>教育阶段</option>
 					<option>小学</option>
 					<option>初中</option>
 					<option>高中</option>
 				</select>
-				<select name="" id="">
+				<select name="grad" id="grad">
 					<option>年级</option>
 					<option>一年级</option>
 					<option>二年级</option>
@@ -3293,10 +3365,10 @@
 				<input type="text" placeholder="所在学校"/>
 			</div>
 			<div class="teacher">
-				<input type="text" name="" id="" value="" placeholder="班主任" />
+				<input type="text" name="" id="teacher" value="teacher" placeholder="班主任" />
 			</div>
 			<div class="fpyhm">
-				<input type="text" name="" id="fpyhm" value="" placeholder="免费学习验证码(输入验证码免费学习课程)" />
+				<input type="text" name="" id="fpyhm" value="yzm" placeholder="免费学习验证码(输入验证码免费学习课程)" />
 				<p style="color: red;"></p>
 			</div>
 			<div class="tjzl">
