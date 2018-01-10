@@ -421,7 +421,7 @@ body{
 	height: 30px;
 	padding: 0 20px;
 }
-.header .nav-login .nav-img .nav-img-con  .nav-colse span{
+.header .nav-login .nav-img .nav-img-con  .nav-colse a{
 	float: right;
 	height: 30px;
 	line-height: 30px;
@@ -743,7 +743,7 @@ body{
 .login-con input:last-child{
 	border: 0;
 	font-size: 16px;
-	background: #999;
+	background: #d21213;
 	color: #fff;
 	padding: 0;
 }
@@ -771,7 +771,7 @@ body{
 	height: 40px;
 	line-height: 40px;
 	font-weight: 700;
-	background: #ccc;
+	background: url(../img/icon/timg.jpg) no-repeat;
 	font-style: italic;
 	font-size: 18px;
 	text-align: center;
