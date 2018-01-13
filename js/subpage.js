@@ -1,6 +1,6 @@
 //筛选条件
 //screenSX($("[name='mode']"));
-//screenSX($("[name='stage']"));
+//screen;SX($("[name='stage']"));
 //screenSX($("[name='board']"));
 function screenSX(obj){
 	obj.each(function(){
@@ -1083,6 +1083,7 @@ var data = [
         "identify": null
     }
 ]
+
 $('#kcpl').empty();
 $('#kcjd').empty();
 $('#kcclass').empty();
@@ -1092,21 +1093,33 @@ $('<a href="javascript:;" name="board" class="all on">全部</a>').appendTo($('#
 creatNav(data,'mode',$('#kcpl'));
 function creatNav(arry,className,wrapName){
 	$.each(arry,function(i,val){
-		$('<a href="javascript:;" name="'+className+'" class="sx_child">'+arry[i].typeName+'</a>').appendTo(wrapName);
+		$('<a href="javascript:;" name="'+className+'" class="sx_child" data-id="'+arry[i].id+'">'+arry[i].typeName+'</a>').appendTo(wrapName);
 	});
 }
 $.each(data,function(i,val){
-	console.log(data[i].children);
+	//console.log(data[i].children);
 	creatNav(data[i].children,'stage',$('#kcjd'));
 	$.each(data[i].children,function(j,val){
-		console.log(data[i].children[j].children);
+		//console.log(data[i].children[j].children);
 		creatNav(data[i].children[j].children,'board',$('#kcclass'));
 	});
 });
 
+//生成对应的热门课程
+function creatRmkc(arry,name){
+	name.empty();
+	$.each(arry, function(i,val) {
+		$('<li class="clearfix side-active"><a href="javascript:;"><p class="cont">'+arry[i].title+'</p></a></li>').appendTo(name);
+	});
+}
 
-
-
+//生成对应课程
+function creatKc(arry,name){
+	name.empty();
+	$.each(arry, function(i,val) {
+		$('<li><a href="javascript:;"><div class="kc"><div class="kctop"><img class="lazy" alt="" width="200" height="124" data-original="img/example.jpg" src="../img/pic03.jpg" /></div><div class="kcmask"></div></div><div class="texts"><div class="titles ellipsis">'+arry[i]+'</div><div class="kcsm"><div class="kcsm-top"><p><span></span><span>'+arry[i]+'</span></p><p><em>￥'+arry[i]+'</em></p></div><div class="kcsm-foot"><p>'+arry[i]+'</p></div></div></div></a></li>').appendTo(name);
+	});
+}
 
 //左侧边栏 热门精品微课
 $('.sidebar li').hover(function(){

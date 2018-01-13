@@ -36,6 +36,18 @@
 <style type="text/css">
 
 </style>
+
+<script>
+	//数组去重
+var arry = ['1','a','3','cc','b','3','a','bbbbbb','abc','cc'];
+//const newArry = new Set();
+//for(let i=0;i<arry.length;i++){
+//	newArry.add(arry[i]);
+//}
+const newArry = new Set(arry);
+console.log(newArry);
+console.log([...newArry]);
+</script>
 </head>
 <body style="margin-top: 50px;" data-spy="scroll" data-target="#myNavbar" data-offset="100">
 <div class="wrap">
